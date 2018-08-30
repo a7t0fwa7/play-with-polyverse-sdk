@@ -88,10 +88,10 @@ import EventEmitter from 'wolfy87-eventemitter'
   function setOpts(opts) {
     var opts = opts || {};
     this.opts = opts;
-    this.opts.baseUrl = this.opts.baseUrl || 'https://labs.play-with-docker.com';
+    this.opts.baseUrl = this.opts.baseUrl || 'https://play.polyverse.io';
     this.opts.ports = this.opts.ports || [];
     this.opts.ImageName = this.opts.ImageName || '';
-    this.opts.oauthProvider = this.opts.oauthProvider || 'docker';
+    this.opts.oauthProvider = this.opts.oauthProvider || 'github';
   }
 
   pwd.prototype.login = function(cb) {
