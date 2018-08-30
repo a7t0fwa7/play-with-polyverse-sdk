@@ -92,7 +92,7 @@ import EventEmitter from 'wolfy87-eventemitter'
     this.opts.ports = this.opts.ports || [];
     this.opts.ImageName = this.opts.ImageName || '';
     this.opts.oauthProvider = this.opts.oauthProvider || 'github';
-    this.opts.sessionDuration = this.opts.oauthProvider || '90m';
+    this.opts.sessionDuration = this.opts.sessionDuration || '90m';
   }
 
   pwd.prototype.login = function(cb) {
