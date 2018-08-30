@@ -92,6 +92,7 @@ import EventEmitter from 'wolfy87-eventemitter'
     this.opts.ports = this.opts.ports || [];
     this.opts.ImageName = this.opts.ImageName || '';
     this.opts.oauthProvider = this.opts.oauthProvider || 'github';
+    this.opts.sessionDuration = this.opts.oauthProvider || '90m';
   }
 
   pwd.prototype.login = function(cb) {
@@ -130,7 +131,7 @@ import EventEmitter from 'wolfy87-eventemitter'
       method: 'POST',
       url: this.opts.baseUrl + '/',
       opts: {headers:{'Content-type':'application/x-www-form-urlencoded'}},
-      data: encodeURIComponent('session-duration') + '=' + encodeURIComponent('90m')
+      data: encodeURIComponent('session-duration') + '=' + encodeURIComponent(self.opts.sessionDuration)
     }, function(resp) {
       //TODO handle errors
       if (resp.status == 200) {
